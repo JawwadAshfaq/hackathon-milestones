@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(90deg, #00d4ff 0%, #020024 100%, #090979 35%);
+  animation: fadeInBody 1s ease-in-out;
+}
+
+.container {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  display: grid;
+  place-items: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.banner-section {
+  width: 100%;
+}
+
+.resume-container {
+  display: flex;
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.8s ease-out;
+  flex-wrap: wrap; /* Allows content to wrap in smaller screens */
+}
+
+/* Left Section Styling */
+.left-section {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 20px;
+  width: 35%;
+  text-align: center;
+  border-right: 5px solid #00d1fc;
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  margin-top: 10%;
+  border-radius: 50%;
+  border: 5px solid #00d1fc;
+  margin-bottom: 20px;
+  animation: zoomIn 1s ease-out;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 10px 0;
+  margin-bottom: 30px;
+  text-align: center;
+  animation: fadeInDown 1s ease-out;
+}
+
+h3 {
+  font-size: 18px;
+  padding: 2%;
+  margin: 20px 0 10px;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00d1fc;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+ul {
+  padding: 0;
+  margin: 10px 0;
+  animation: fadeInUp 1s ease-out;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+ul li {
+  margin: 5px 0;
+  text-align: left;
+  animation: slideInUp 1s ease-out;
+}
+
+/* Right Section Styling */
+.right-section {
+  padding: 35px;
+  width: 65%;
+  box-shadow: 0px 2px 20px 3px black;
+  animation: fadeInRight 0.8s ease-out;
+}
+
+/* Advanced Animations for Sections */
+#personal-info,
+#education,
+#work-experience {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSection 1s ease-out forwards;
+}
+
+#personal-info {
+  animation-delay: 0.5s;
+}
+
+#education {
+  animation-delay: 1s;
+}
+
+#work-experience {
+  animation-delay: 1.5s;
+}
+
+button {
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+  background: #00d0fb;
+  padding: 18px;
+  border: none;
+  color: white;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: bounceIn 1s ease-out;
+}
+
+button:hover {
+  background: #00b0f0;
+  transform: scale(1.05);
+}
+
+/* Paragraph Animation */
+#objective p {
+  letter-spacing: -0.6px;
+  line-height: 26px;
+  animation: fadeInParagraph 1s ease-out;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInParagraph {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and small screens */
+@media (max-width: 768px) {
+  .resume-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    border-right: none;
+    border-bottom: 5px solid #00d1fc;
+  }
+
+  .left-section {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .right-section {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Small screens and mobile phones */
+@media (max-width: 480px) {
+  .resume-container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  ul {
+    padding-left: 10px;
+  }
+
+  #objective p {
+    font-size: 16px;
+  }
+}
